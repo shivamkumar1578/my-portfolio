@@ -42,7 +42,7 @@ function Resume() {
     },
     {
       heading: "Tools & Technologies",
-      items: ["Power BI (DAX)", "Excel", "Power Query", "Formulas"],
+      items: ["Power BI (DAX)", "Excel", "Tableau"],
     },
     {
       heading: "Libraries & Concepts",
@@ -117,9 +117,36 @@ function Resume() {
   ];
 
   const certificates = [
-    { title: "Cloud Computing", org: "NPTEL", date: "Apr 2025" },
-    { title: "OOP (Object Oriented Programming)", org: "iamneo", date: "Dec 2024" },
-    { title: "Java + DSA", org: "Apna College", date: "Aug 2023" },
+    {
+      title: "Cloud Computing",
+      org: "NPTEL",
+      date: "Apr 2025",
+      link: "/certificates/cloud-computing.png",
+    },
+    {
+      title: "The Bits and Bytes of Computer Networking",
+      org: "Coursera",
+      date: "Sept 2024",
+      link: "/certificates/bits-bytes-networking.png",
+    },
+    {
+      title: "Java + DSA",
+      org: "Apna College",
+      date: "Aug 2023",
+      link: "/certificates/java-dsa.png",
+    },
+    {
+      title: "Introduction to Hardware and Operating Systems",
+      org: "Coursera",
+      date: "Sept 2025",
+      link: "/certificates/hardware-os.png",
+    },
+    {
+      title: "Peer-to-Peer Protocols and Local Area Networks",
+      org: "Coursera",
+      date: "Oct 2025",
+      link: "/certificates/p2p-lan.png",
+    },
   ];
 
   return (
@@ -287,22 +314,33 @@ function Resume() {
             {certificates.map((cert) => (
               <div
                 key={cert.title}
-                className="rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-violet-400/50 hover:bg-white/[0.08]"
+                className="rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]"
               >
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
                   <div>
                     <h2 className="text-2xl font-semibold text-blue-300">{cert.title}</h2>
                     <p className="mt-1 text-lg text-gray-400">{cert.org}</p>
                   </div>
 
-                  <div className="rounded-full bg-violet-600/20 px-5 py-2 text-base font-medium text-violet-300">
-                    {cert.date}
+                  <div className="flex flex-wrap items-center gap-3">
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-xl bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-base font-semibold text-white transition-all duration-300 hover:scale-105 hover:opacity-90"
+                    >
+                      View Certificate
+                    </a>
+
+                    <div className="rounded-full bg-violet-600/20 px-5 py-2 text-base font-medium text-violet-300">
+                      {cert.date}
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
 
-            <div className="pt-4">
+            {/* <div className="pt-4">
               <h2 className="text-3xl font-semibold text-blue-300">Achievement</h2>
               <div className="mt-5 rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-violet-400/50 hover:bg-white/[0.08]">
                 <h3 className="text-2xl font-semibold text-blue-300">
@@ -313,7 +351,7 @@ function Resume() {
                   problem-solving ability and consistent coding practice.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         )}
       </div>

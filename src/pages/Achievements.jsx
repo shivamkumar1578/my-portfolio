@@ -16,14 +16,14 @@ function Achievements() {
       description:
         "Solved 100+ coding questions focused on arrays, trees, recursion, and core problem-solving patterns.",
     },
-    {
-      icon: "🏆",
-      title: "Dean’s List Recognition",
-      date: "January 2026",
-      type: "Academic Achievement",
-      description:
-        "Recognized for strong academic performance and consistent progress during my university journey.",
-    },
+    // {
+    //   icon: "🏆",
+    //   title: "Dean’s List Recognition",
+    //   date: "January 2026",
+    //   type: "Academic Achievement",
+    //   description:
+    //     "Recognized for strong academic performance and consistent progress during my university journey.",
+    // },
     // {
     //   icon: "🌟",
     //   title: "Top Performer in Interview Preparation",

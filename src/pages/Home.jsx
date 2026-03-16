@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { TypeAnimation } from "react-type-animation";
 
 function Home() {
   const skills = [
@@ -55,7 +56,18 @@ function Home() {
         </h1>
 
         <h2 className="mt-4 text-2xl font-medium text-gray-300 md:text-4xl">
-          Aspiring Data Scientist
+          <TypeAnimation
+            sequence={[
+              "Aspiring Data Analyst",
+              2000,
+              "",
+              500,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+            cursor={true}
+          />
         </h2>
 
         <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-gray-300 md:text-xl">

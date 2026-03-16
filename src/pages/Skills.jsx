@@ -1,202 +1,138 @@
-import { useMemo, useState } from "react";
+import {
+  Code2,
+  Database,
+  Brain,
+  Lightbulb,
+  RefreshCw,
+  Rocket,
+  Users,
+  Palette,
+  BarChart3,
+  BookOpen,
+  FileSpreadsheet,
+  Github,
+  LineChart,
+  Bot,
+  BrushCleaning,
+  Server,
+  Coffee,
+} from "lucide-react";
 
 function Skills() {
-  const [activeCategory, setActiveCategory] = useState("All Skills");
-  const [hoveredSkill, setHoveredSkill] = useState(null);
-
-  const categories = [
-    "All Skills",
-    "ProgrammingLanguages",
-    "Frontend",
-    "Databases",
-    "DataScience",
-    "Tools",
-  ];
-
-  const skills = [
+  const skillSections = [
     {
-      name: "C",
-      level: 70,
-      category: "ProgrammingLanguages",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+      title: "Programming Languages",
+      items: [
+        { name: "Python", icon: <Code2 className="h-7 w-7 text-blue-400" /> },
+        { name: "Java", icon: <Coffee className="h-7 w-7 text-blue-400" /> },
+        { name: "SQL", icon: <Database className="h-7 w-7 text-blue-400" /> },
+      ],
     },
     {
-      name: "C++",
-      level: 75,
-      category: "ProgrammingLanguages",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+      title: "Libraries",
+      items: [
+        { name: "Pandas", icon: <BarChart3 className="h-7 w-7 text-blue-400" /> },
+        { name: "NumPy", icon: <Code2 className="h-7 w-7 text-blue-400" /> },
+        { name: "Scikit-learn", icon: <Brain className="h-7 w-7 text-blue-400" /> },
+        { name: "Matplotlib", icon: <LineChart className="h-7 w-7 text-blue-400" /> },
+        { name: "Seaborn", icon: <RefreshCw className="h-7 w-7 text-blue-400" /> },
+      ],
     },
     {
-      name: "Java",
-      level: 85,
-      category: "ProgrammingLanguages",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+      title: "Data Science Concepts",
+      items: [
+        { name: "Machine Learning", icon: <Bot className="h-7 w-7 text-blue-400" /> },
+        { name: "Exploratory Data Analysis", icon: <LineChart className="h-7 w-7 text-blue-400" /> },
+        { name: "Data Cleaning", icon: <BrushCleaning className="h-7 w-7 text-blue-400" /> },
+        { name: "DBMS", icon: <Server className="h-7 w-7 text-blue-400" /> },
+        // { name: "Object Oriented Programming", icon: <Code2 className="h-7 w-7 text-blue-400" /> },
+      ],
     },
     {
-      name: "Python",
-      level: 75,
-      category: "ProgrammingLanguages",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      title: "Tools",
+      items: [
+        { name: "Power BI", icon: <LineChart className="h-7 w-7 text-blue-400" /> },
+        { name: "Tableau", icon: <BarChart3 className="h-7 w-7 text-blue-400" /> },
+        { name: "Excel", icon: <FileSpreadsheet className="h-7 w-7 text-blue-400" /> },
+        { name: "JupyterLab", icon: <BookOpen className="h-7 w-7 text-blue-400" /> },
+        { name: "GitHub", icon: <Github className="h-7 w-7 text-blue-400" /> },
+      ],
     },
     {
-      name: "Excel",
-      level: 85,
-      category: "Tools",
-      logo: "https://img.icons8.com/color/96/microsoft-excel-2019--v1.png",
-    },
-    {
-      name: "SQL",
-      level: 80,
-      category: "Databases",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    },
-    {
-      name: "Power BI",
-      level: 80,
-      category: "Tools",
-      logo: "https://img.icons8.com/color/96/power-bi.png",
-    },
-    {
-      name: "DBMS",
-      level: 80,
-      category: "Databases",
-      logo: "https://img.icons8.com/color/96/database.png",
-    },
-    {
-      name: "AI",
-      level: 75,
-      category: "DataScience",
-      logo: "https://img.icons8.com/color/96/artificial-intelligence.png",
-    },
-    {
-      name: "Machine Learning",
-      level: 75,
-      category: "DataScience",
-      logo: "https://img.icons8.com/color/96/machine-learning.png",
-    },
-    {
-      name: "HTML",
-      level: 95,
-      category: "Frontend",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    },
-    {
-      name: "CSS",
-      level: 85,
-      category: "Frontend",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    },
-    {
-      name: "MySQL",
-      level: 85,
-      category: "Databases",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    },
-    {
-      name: "Git",
-      level: 90,
-      category: "Tools",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    },
-    {
-      name: "GitHub",
-      level: 90,
-      category: "Tools",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-      invertLogo: true,
+      title: "Soft Skills",
+      items: [
+        { name: "Problem Solving", icon: <Lightbulb className="h-7 w-7 text-blue-400" /> },
+        { name: "Team Collaboration", icon: <Users className="h-7 w-7 text-blue-400" /> },
+        { name: "Adaptability", icon: <RefreshCw className="h-7 w-7 text-blue-400" /> },
+        { name: "Creativity", icon: <Palette className="h-7 w-7 text-blue-400" /> },
+        { name: "Quick Learner", icon: <Rocket className="h-7 w-7 text-blue-400" /> },
+      ],
     },
   ];
-
-  const filteredSkills = useMemo(() => {
-    if (activeCategory === "All Skills") return skills;
-    return skills.filter((skill) => skill.category === activeCategory);
-  }, [activeCategory]);
 
   return (
-    <section className="mx-auto max-w-6xl px-5 py-10 md:px-6 md:py-12">
+    <section className="mx-auto max-w-7xl px-5 py-6 md:px-6 md:py-8">
+      {/* TOP HEADING */}
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
           <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
-            Technical Arsenal
+            Technical Skills
           </span>
         </h1>
 
-        <div className="mx-auto mt-4 h-1 w-28 rounded-full bg-gradient-to-r from-blue-500 to-violet-500" />
+        <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-blue-500 to-violet-500" />
 
         <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-gray-300 md:text-lg">
-          A showcase of technologies I&apos;ve mastered on my journey as a developer.
+          A showcase of technologies I&apos;ve built, practiced, and continue to
+          strengthen on my journey in data science and development.
         </p>
       </div>
 
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-        {categories.map((category) => {
-          const isActive = activeCategory === category;
+      {/* SKILL CARDS */}
+      <div className="mt-12 grid gap-6 md:grid-cols-2">
+        {skillSections.slice(0, 4).map((section) => (
+          <div
+            key={section.title}
+            className="rounded-3xl border border-blue-400/20 bg-white/5 p-7 shadow-[0_0_40px_rgba(59,130,246,0.08)] transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/40 hover:bg-[#16274d] hover:shadow-[0_0_50px_rgba(59,130,246,0.14)]"
+          >
+            <h2 className="text-2xl font-semibold text-blue-400 md:text-3xl">
+              {section.title}
+            </h2>
 
-          return (
-            <button
-              key={category}
-              type="button"
-              onClick={() => setActiveCategory(category)}
-              className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 md:px-6 md:text-base ${
-                isActive
-                  ? "bg-gradient-to-r from-blue-500 to-violet-500 text-white shadow-[0_10px_30px_rgba(99,102,241,0.26)]"
-                  : "bg-white/10 text-gray-200 hover:bg-white/15 hover:text-white"
-              }`}
-            >
-              {category}
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {filteredSkills.map((skill) => {
-          const isHovered = hoveredSkill === skill.name;
-
-          return (
-            <div
-              key={skill.name}
-              onMouseEnter={() => setHoveredSkill(skill.name)}
-              onMouseLeave={() => setHoveredSkill(null)}
-              className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-lg transition-all duration-300 hover:border-violet-400/70 hover:bg-[#16274d] hover:shadow-[0_0_0_1px_rgba(139,92,246,0.26)]"
-            >
-              <div className="flex items-center gap-4 p-5">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/10">
-                  <img
-                    src={skill.logo}
-                    alt={skill.name}
-                    className={`h-9 w-9 object-contain ${skill.invertLogo ? "invert" : ""}`}
-                  />
+            <div className="mt-8 grid grid-cols-1 gap-y-7 gap-x-8 sm:grid-cols-2">
+              {section.items.map((item) => (
+                <div key={item.name} className="flex items-center gap-4">
+                  <div className="shrink-0">{item.icon}</div>
+                  <p className="text-xl text-white md:text-2xl">{item.name}</p>
                 </div>
-
-                <div className="w-full">
-                  <div className="flex items-center justify-between gap-3">
-                    <h2 className="text-xl font-semibold text-white md:text-2xl">
-                      {skill.name}
-                    </h2>
-                    <span className="text-lg font-medium text-violet-300">
-                      {skill.level}%
-                    </span>
-                  </div>
-
-                  <div className="mt-4 h-2.5 w-full rounded-full bg-slate-600/60">
-                    <div
-                      className="h-2.5 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 transition-all duration-700 ease-out"
-                      style={{ width: isHovered ? `${skill.level}%` : "0%" }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="border-t border-white/5 bg-black/10 px-5 py-3 text-right text-sm text-gray-400 md:text-base">
-                {skill.category}
-              </div>
+              ))}
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
 
-      <div className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-7 shadow-lg transition-all duration-300 hover:border-violet-400/40 hover:bg-[#16274d]">
+      {/* SOFT SKILLS */}
+      <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <div className="rounded-3xl border border-blue-400/20 bg-white/5 p-7 shadow-[0_0_40px_rgba(59,130,246,0.08)] transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/40 hover:bg-[#16274d] hover:shadow-[0_0_50px_rgba(59,130,246,0.14)]">
+          <h2 className="text-2xl font-semibold text-blue-400 md:text-3xl">
+            {skillSections[4].title}
+          </h2>
+
+          <div className="mt-8 grid grid-cols-1 gap-y-7 gap-x-8 sm:grid-cols-2">
+            {skillSections[4].items.map((item) => (
+              <div key={item.name} className="flex items-center gap-4">
+                <div className="shrink-0">{item.icon}</div>
+                <p className="text-xl text-white md:text-2xl">{item.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div />
+      </div>
+
+      {/* BOTTOM INFO */}
+      <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-7 shadow-lg transition-all duration-300 hover:border-violet-400/40 hover:bg-[#16274d]">
         <h2 className="text-3xl font-semibold text-blue-300 md:text-4xl">
           Learning Journey
         </h2>
@@ -209,7 +145,7 @@ function Skills() {
           {["Power BI", "Excel", "Python", "Java", "SQL"].map((item) => (
             <span
               key={item}
-              className="rounded-full border border-indigo-400/20 bg-indigo-600/30 px-4 py-2 text-sm font-medium text-white md:px-5 md:text-base"
+              className="rounded-full border border-indigo-400/20 bg-indigo-600/30 px-5 py-2.5 text-base font-medium text-white"
             >
               {item}
             </span>
