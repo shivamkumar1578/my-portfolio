@@ -3,13 +3,11 @@ import { TypeAnimation } from "react-type-animation";
 
 function Home() {
   const skills = [
-    "Java",
     "Python",
-    "Power BI",
     "SQL",
-    "DSA",
-    "Git",
-    "GitHub",
+    "Excel",
+    "Power BI",
+    "Java",
   ];
 
   const quickFacts = [
@@ -26,13 +24,13 @@ function Home() {
     {
       icon: "💼",
       label: "Focus",
-      value: "Data Science & Development",
+      value: "Data Analytics & Java Development",
     },
   ];
 
   const hobbies = [
-    { icon: "💻", text: "Building Projects" },
-    { icon: "📚", text: "Reading & Learning" },
+    { icon: "🎮", text: "Playing Games" },
+    { icon: "📚", text: "Reading Books" },
     { icon: "🎵", text: "Music" },
   ];
 
@@ -60,20 +58,21 @@ function Home() {
             sequence={[
               "Aspiring Data Analyst",
               2000,
-              "",
-              500,
+              "Java Programmer",
+              2000,
             ]}
             wrapper="span"
-            speed={50}
+            speed={20}
             repeat={Infinity}
             cursor={true}
           />
         </h2>
 
         <p className="mx-auto mt-8 max-w-4xl text-lg leading-9 text-gray-300 md:text-xl">
-          Welcome to my digital portfolio! I build practical projects in Java,
-          Python, Data Science, and Analytics, transforming ideas into clean,
-          recruiter-friendly work that solves real-world problems.
+          Aspiring Data Analyst with a strong foundation in Python, SQL, Excel, and data visualization, focused 
+          on turning raw data into clear, actionable insights.
+          Also skilled in Java, with a problem-solving mindset that helps me approach analytical challenges in a 
+          structured and efficient way.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -119,7 +118,7 @@ function Home() {
         <div className="mt-14 grid gap-8 lg:grid-cols-[0.9fr_1.4fr]">
           {/* LEFT COLUMN */}
           <div className="space-y-8">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-7 shadow-lg transition-all duration-300 hover:border-violet-400/40 hover:bg-[#16274d]">
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-7 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]">
               <h3 className="text-3xl font-semibold text-white">Quick Facts</h3>
 
               <div className="mt-8 space-y-6">
@@ -140,7 +139,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-7 shadow-lg transition-all duration-300 hover:border-violet-400/40 hover:bg-[#16274d]">
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-7 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]">
               <h3 className="text-3xl font-semibold text-white">
                 When I&apos;m Not Coding
               </h3>
@@ -161,7 +160,7 @@ function Home() {
 
           {/* RIGHT COLUMN */}
           <div className="space-y-8">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg transition-all duration-300 hover:border-violet-400/40 hover:bg-[#16274d]">
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]">
               <h3 className="text-4xl font-semibold text-blue-300">
                 My Journey
               </h3>
@@ -191,7 +190,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg transition-all duration-300 hover:border-violet-400/40 hover:bg-[#16274d]">
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]">
               <h3 className="text-4xl font-semibold text-blue-300">
                 My Approach
               </h3>

@@ -88,7 +88,7 @@ function Contact() {
       {/* Main cards */}
       <div className="mt-12 grid gap-8 lg:grid-cols-[1.55fr_1fr]">
         {/* Left form */}
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg transition-all duration-300 hover:border-violet-400/40 hover:bg-white/[0.07]">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="mb-3 block text-base font-medium text-white">
@@ -158,7 +158,7 @@ function Contact() {
         </div>
 
         {/* Right info */}
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg transition-all duration-300 hover:border-violet-400/40 hover:bg-white/[0.07]">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]">
           <h2 className="text-4xl font-semibold leading-tight text-blue-300">
             Contact Information
           </h2>
@@ -258,7 +258,7 @@ function Contact() {
       </div>
 
       {/* Bottom card */}
-      <div className="mt-12 rounded-3xl border border-white/10 bg-white/5 px-8 py-7 text-center shadow-lg transition-all duration-300 hover:border-violet-400/40 hover:bg-white/[0.07]">
+      <div className="mt-12 rounded-3xl border border-white/10 bg-white/5 px-8 py-7 text-center shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]">
         <p className="text-xl text-gray-200">
           Looking forward to hearing from you!
         </p>

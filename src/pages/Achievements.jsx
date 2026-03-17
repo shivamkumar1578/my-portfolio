@@ -2,36 +2,20 @@ function Achievements() {
   const achievements = [
     {
       icon: "🔥",
-      title: "80+ Day Streak on LeetCode",
-      date: "February 2026",
-      type: "Coding Achievement",
-      description:
-        "Maintained a 80+ day daily problem-solving streak on LeetCode, showcasing consistency and discipline.",
-    },
-    {
-      icon: "💡",
-      title: "100+ LeetCode Questions Solved",
+      title: "Consistent DSA Practice on LeetCode",
       date: "March 2026",
       type: "Coding Achievement",
       description:
-        "Solved 100+ coding questions focused on arrays, trees, recursion, and core problem-solving patterns.",
+        "Maintained a 100+ day daily problem-solving streak on LeetCode, demonstrating strong consistency and discipline. Built a habit of approaching problems regularly, improving focus, persistence, and long-term learning in data structures and algorithms.",
     },
-    // {
-    //   icon: "🏆",
-    //   title: "Dean’s List Recognition",
-    //   date: "January 2026",
-    //   type: "Academic Achievement",
-    //   description:
-    //     "Recognized for strong academic performance and consistent progress during my university journey.",
-    // },
-    // {
-    //   icon: "🌟",
-    //   title: "Top Performer in Interview Preparation",
-    //   date: "July 2024",
-    //   type: "Learning Achievement",
-    //   description:
-    //     "Completed structured interview preparation with strong performance in DSA and core CS topics.",
-    // },
+    {
+      icon: "💡",
+      title: "LeetCode Badges & Questions Solved",
+      date: "March 2026",
+      type: "Coding Achievement",
+      description:
+        "Solved 150+ coding problems on LeetCode, gaining exposure to a wide range of problem-solving techniques and patterns. Earned multiple badges through active participation, reflecting continuous growth, performance, and engagement on the platform.",
+    },
     {
       icon: "🥇",
       title: "Badge of Appreciation – TECH-A-ZON Session",
@@ -80,13 +64,18 @@ function Achievements() {
         </h1>
 
         <div className="mx-auto mt-4 h-1 w-28 rounded-full bg-gradient-to-r from-blue-500 to-violet-500" />
+
+        <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-gray-300 md:text-lg">
+          A collection of milestones that reflect my consistency, technical growth,
+          and active participation in coding, hackathons, and learning-driven events.
+        </p>
       </div>
 
       <div className="mt-14 space-y-8">
         {achievements.map((item) => (
           <div
             key={item.title}
-            className="group relative rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-400/80 hover:bg-[#16274d] hover:shadow-[0_0_0_1px_rgba(139,92,246,0.35),0_12px_35px_rgba(0,0,0,0.35)]"
+            className="group relative rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]"
           >
             <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
               <div className="flex gap-5">

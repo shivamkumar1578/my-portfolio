@@ -54,7 +54,7 @@ function Skills() {
         { name: "Power BI", icon: <LineChart className="h-7 w-7 text-blue-400" /> },
         { name: "Tableau", icon: <BarChart3 className="h-7 w-7 text-blue-400" /> },
         { name: "Excel", icon: <FileSpreadsheet className="h-7 w-7 text-blue-400" /> },
-        { name: "JupyterLab", icon: <BookOpen className="h-7 w-7 text-blue-400" /> },
+        { name: "VS Code", icon: <BookOpen className="h-7 w-7 text-blue-400" /> },
         { name: "GitHub", icon: <Github className="h-7 w-7 text-blue-400" /> },
       ],
     },
@@ -93,7 +93,7 @@ function Skills() {
         {skillSections.slice(0, 4).map((section) => (
           <div
             key={section.title}
-            className="rounded-3xl border border-blue-400/20 bg-white/5 p-7 shadow-[0_0_40px_rgba(59,130,246,0.08)] transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/40 hover:bg-[#16274d] hover:shadow-[0_0_50px_rgba(59,130,246,0.14)]"
+            className="rounded-3xl border border-blue-400/20 bg-white/5 p-7 shadow-[0_0_40px_rgba(59,130,246,0.08)] transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]"
           >
             <h2 className="text-2xl font-semibold text-blue-400 md:text-3xl">
               {section.title}
@@ -113,7 +113,7 @@ function Skills() {
 
       {/* SOFT SKILLS */}
       <div className="mt-6 grid gap-6 md:grid-cols-2">
-        <div className="rounded-3xl border border-blue-400/20 bg-white/5 p-7 shadow-[0_0_40px_rgba(59,130,246,0.08)] transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/40 hover:bg-[#16274d] hover:shadow-[0_0_50px_rgba(59,130,246,0.14)]">
+        <div className="rounded-3xl border border-blue-400/20 bg-white/5 p-7 shadow-[0_0_40px_rgba(59,130,246,0.08)] transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]">
           <h2 className="text-2xl font-semibold text-blue-400 md:text-3xl">
             {skillSections[4].title}
           </h2>
@@ -132,17 +132,17 @@ function Skills() {
       </div>
 
       {/* BOTTOM INFO */}
-      <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-7 shadow-lg transition-all duration-300 hover:border-violet-400/40 hover:bg-[#16274d]">
+      <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-7 shadow-lg transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]">
         <h2 className="text-3xl font-semibold text-blue-300 md:text-4xl">
           Learning Journey
         </h2>
 
         <p className="mt-5 text-lg leading-8 text-gray-300 md:text-xl">
-          My technical skill set is constantly evolving. Currently exploring:
+          My learning journey is driven by curiosity, consistency, and continuous improvement. Currently strengthening my skills in:
         </p>
 
         <div className="mt-7 flex flex-wrap gap-3">
-          {["Power BI", "Excel", "Python", "Java", "SQL"].map((item) => (
+          {["Python", "SQL", "Power BI", "Machine Learning", "Java"].map((item) => (
             <span
               key={item}
               className="rounded-full border border-indigo-400/20 bg-indigo-600/30 px-5 py-2.5 text-base font-medium text-white"

@@ -207,7 +207,7 @@ function Resume() {
           education.map((item) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-white/10 bg-white/5 p-7 transition-all duration-300 hover:border-violet-400/50 hover:bg-white/[0.08]"
+              className="rounded-3xl border border-white/10 bg-white/5 p-7 transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div>
@@ -228,7 +228,7 @@ function Resume() {
           skills.map((section) => (
             <div
               key={section.heading}
-              className="rounded-3xl border border-white/10 bg-white/5 p-7 transition-all duration-300 hover:border-violet-400/50 hover:bg-white/[0.08]"
+              className="rounded-3xl border border-white/10 bg-white/5 p-7 transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]"
             >
               <h2 className="text-2xl font-semibold text-blue-300">{section.heading}</h2>
               <div className="mt-5 flex flex-wrap gap-3">
@@ -248,7 +248,7 @@ function Resume() {
           projects.map((project) => (
             <div
               key={project.title}
-              className="rounded-3xl border border-white/10 bg-white/5 p-7 transition-all duration-300 hover:border-violet-400/50 hover:bg-white/[0.08]"
+              className="rounded-3xl border border-white/10 bg-white/5 p-7 transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div className="max-w-4xl">
@@ -285,7 +285,7 @@ function Resume() {
           training.map((item) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-white/10 bg-white/5 p-7 transition-all duration-300 hover:border-violet-400/50 hover:bg-white/[0.08]"
+              className="rounded-3xl border border-white/10 bg-white/5 p-7 transition-all duration-300 hover:scale-[1.02] hover:border-violet-400/50 hover:bg-white/[0.08]"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div className="max-w-4xl">
